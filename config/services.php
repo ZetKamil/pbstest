@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'openexchangerates' => [
+        'api_key' => env('OER_API_KEY'),
+        'url' => env('OER_API_URL', 'https://openexchangerates.org/api/latest.json'),
+    ],
+
 ];
