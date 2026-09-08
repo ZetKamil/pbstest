@@ -71,8 +71,8 @@ class CurrencyService
             }
 
             try {
-                // 2. Perform HTTP GET request with a 5-second timeout to prevent hanging worker processes
-                $response = Http::timeout(5)->get($baseUrl, [
+                // 2. Perform HTTP GET request with a 5-second timeout and SSL fallback for local dev environments
+                $response = Http::withoutVerifying()->timeout(5)->get($baseUrl, [
                     'app_id' => $apiKey,
                 ]);
 
