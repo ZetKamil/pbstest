@@ -13,6 +13,7 @@ class AdminUserSeeder extends Seeder
 ],
 [
     'name' => 'Kamil Admin', // naam van de admin
+    'currency_code' => 'EUR',
     'password' => Hash::make('kamil123'), // wachtwoord gehashed opslaan
 'email_verified_at' => now(), // meteen als verified markeren
 ]

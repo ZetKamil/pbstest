@@ -21,8 +21,17 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'currency_code',
         'password',
     ];
+
+    /**
+     * Get the orders for the user.
+     */
+    public function orders(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
